@@ -5,6 +5,7 @@ const program = require('commander');
 const newRc = require('../packages/commands/new-rc');
 const addConfig = require('../packages/commands/add');
 const start = require('../packages/commands/start');
+const open = require('../packages/commands/open');
 
 program
   .version('1.0.0', '-v, --version');
@@ -28,6 +29,13 @@ program
   .description('start a project')
   .action(function() {
     start();
+  });
+
+program
+  .command('open')
+  .description('open a project')
+  .action(function() {
+    open();
   });
 
 program.parse(process.argv);
