@@ -8,7 +8,7 @@ npm install you-cli -g
 
 ### you --help
 ```
-  Usage: index [options] [command]
+  Usage: you [options] [command]
 
   Options:
     -v, --version    output the version number
