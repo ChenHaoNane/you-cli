@@ -3,6 +3,8 @@ const path = require('path');
 const fs = require('fs');
 const program = require('commander');
 const newRc = require('../packages/commands/new-rc');
+const addConfig = require('../packages/commands/add');
+const start = require('../packages/commands/start');
 
 program
   .version('1.0.0', '-v, --version');
@@ -12,6 +14,20 @@ program
   .description('generate a new react component')
   .action(function(name) {
     newRc(name);
+  });
+
+program
+  .command('add')
+  .description('add config for start command')
+  .action(function() {
+    addConfig();
+  });
+
+program
+  .command('start')
+  .description('start a project')
+  .action(function() {
+    start();
   });
 
 program.parse(process.argv);

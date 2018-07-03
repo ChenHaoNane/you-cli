@@ -16,5 +16,7 @@ npm install you-cli -g
   
   Commands:
     new-rc           genetate a new react component
+    add              add config for start command
+    start            start a project
 
 ```
