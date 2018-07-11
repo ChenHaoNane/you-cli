@@ -11,7 +11,7 @@ let targetRootPath;
 function getComponentName(name) {
   name = name
     .replace(/[-_]/g, '')
-    .replace(/[a-z]/, ($1) => {
+    .replace(/[a-zA-Z]/, ($1) => {
       return $1.toUpperCase();
     });
   return name;
