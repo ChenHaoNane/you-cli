@@ -27,6 +27,7 @@ module.exports = function() {
           console.log(chalk.green(`端口${port}已解除占用`));
         } else {
           console.log(chalk.yellow('已终止启动'));
+          return;
         }
       }
 
