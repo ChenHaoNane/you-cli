@@ -8,7 +8,7 @@ const config = require('./config');
 const selectProject = require('./select-project');
 
 module.exports = function() {
-  co(function*() {
+  co(function* () {
     try {
       const answers = yield selectProject('启动');
       const projectName = answers.projectName;
