@@ -32,7 +32,7 @@ module.exports = function() {
       spawnSync(`git tag ${newTag}`, {
         shell: true,
       });
-      spawnSync('git push origin --tags', {
+      spawnSync(`git push origin ${newTag}`, {
         shell: true,
       });
       console.log(chalk.green(`tag推送成功, 当前最新tag为${chalk.yellow(newTag)}`));
